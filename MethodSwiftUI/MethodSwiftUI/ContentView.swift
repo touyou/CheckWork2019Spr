@@ -16,12 +16,16 @@ struct ContentView : View {
     var body: some View {
         VStack {
             Text(answer).font(.title)
-            TextField($number1)
+            TextField($number1) {
+                UIApplication.shared.keyWindow?.endEditing(true)
+                }
                 .frame(height: 30)
                 .padding(5)
                 .background(Color(red: 0.8, green: 0.8, blue: 0.8), cornerRadius: 15)
                 .padding(10)
-            TextField($number2)
+            TextField($number2) {
+                UIApplication.shared.keyWindow?.endEditing(true)
+                }
                 .frame(height: 30)
                 .padding(5)
                 .background(Color(red: 0.8, green: 0.8, blue: 0.8), cornerRadius: 15)
